@@ -9,7 +9,6 @@ class LlmService {
 
   constructor() {
     const apiKey = process.env.OPENAI_API_KEY;
-    console.log("apikey:-",apiKey);
     if (!apiKey) {
       logger.warn('OpenAI API key not found. LLM features will be disabled.');
       return;

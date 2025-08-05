@@ -107,26 +107,26 @@ router.get('/stats/overview', async (req: Request, res: Response) => {
 });
 
 // Debug route for testing LLM service
-router.get('/debug/llm-test', async (req: Request, res: Response) => {
-  try {
-    const testDescription = "Emergency food and clean water for earthquake victims";
-    logger.debug('Testing LLM with description:', testDescription);
+// router.get('/debug/llm-test', async (req: Request, res: Response) => {
+//   try {
+//     const testDescription = "Emergency food and clean water for earthquake victims";
+//     logger.debug('Testing LLM with description:', testDescription);
     
-    const llmService = require('../services/llmService').default;
-    const result = await llmService.analyzeCampaign(testDescription);
-    logger.debug('LLM test result:', result);
+//     const llmService = require('../services/llmService').default;
+//     const result = await llmService.analyzeCampaign(testDescription);
+//     logger.debug('LLM test result:', result);
     
-    res.json({
-      status: 'success',
-      data: result
-    });
-  } catch (error) {
-    logger.error('LLM test error:', error);
-    res.status(500).json({
-      status: 'error',
-      message: error instanceof Error ? error.message : 'Unknown error'
-    });
-  }
-});
+//     res.json({
+//       status: 'success',
+//       data: result
+//     });
+//   } catch (error) {
+//     logger.error('LLM test error:', error);
+//     res.status(500).json({
+//       status: 'error',
+//       message: error instanceof Error ? error.message : 'Unknown error'
+//     });
+//   }
+// });
 
 export default router; 
