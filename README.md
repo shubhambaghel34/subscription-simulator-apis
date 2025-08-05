@@ -71,7 +71,7 @@ npm run build
 npm start
 ```
 
-The API will be available at `http://localhost:3002/api/v1`
+The API will be available at `http://localhost:3002/api/v1/health`
 
 ## API Endpoints
 
